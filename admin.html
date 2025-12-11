@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لوحة التحكم - إدارة المنزل</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-page">
+  <div class="login-container" id="loginForm">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" id="username" placeholder="اسم المستخدم" />
+    <input type="password" id="password" placeholder="كلمة المرور" />
+    <button onclick="login()">دخول</button>
+    <p id="login-error" style="color: red; display: none;">اسم المستخدم أو كلمة المرور غير صحيحة</p>
+  </div>
+
+  <div class="admin-panel" id="adminPanel" style="display: none;">
+    <h2>لوحة التحكم</h2>
+    <p>عدد الزوار: <span id="admin-visitor-count">0</span></p>
+    <hr>
+    <h3>إضافة عامل جديد</h3>
+    <input type="file" id="workerImage" accept="image/*" />
+    <textarea id="workerDesc" placeholder="وصف العامل"></textarea>
+    <button onclick="addWorker()">إضافة</button>
+
+    <h3>العاملون الحاليون</h3>
+    <div id="workersList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

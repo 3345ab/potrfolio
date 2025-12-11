@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إدارة المنزل | Home Maker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://i.ibb.co/35hXR02v/images.png" alt="شعار إدارة المنزل">
+    </div>
+    <div class="title">
+      <h1>إدارة المنزل</h1>
+      <h2>Home Maker</h2>
+    </div>
+  </header>
+
+  <!-- Visitors Counter -->
+  <div class="counter">عدد الزوار: <span id="visitor-count">0</span></div>
+
+  <!-- Admin Panel -->
+  <div id="admin-panel">
+    <h3>لوحة التحكم</h3>
+    <p>عدد الزوار: <strong id="admin-visitor-count">0</strong></p>
+    <div class="admin-form">
+      <input type="file" id="workerImage" accept="image/*" />
+      <textarea id="workerDesc" placeholder="وصف العاملة"></textarea>
+      <button onclick="addWorker()">إضافة عاملة</button>
+    </div>
+
+    <h4 style="margin-top:20px;">الرسائل الواردة من الزبائن</h4>
+    <div id="admin-chat-messages" style="max-height:200px; overflow-y:auto; background:#f8fafc; padding:10px; border-radius:8px; margin-top:10px; font-size:14px;">
+      جاري التحميل...
+    </div>
+    <!-- سيتم إضافة حقل الرد تلقائيًا هنا بواسطة JavaScript -->
+  </div>
+
+  <!-- Workers Gallery -->
+  <main id="workers-container"></main>
+
+  <!-- دردشة منبثقة -->
+  <div id="chat-icon" title="مراسلة المسؤول">💬</div>
+  <div id="chat-box">
+    <div id="chat-messages">
+      <div class="chat-msg admin-msg">مرحبًا! كيف يمكنني مساعدتك؟</div>
+    </div>
+    <div id="chat-input">
+      <input type="text" id="chat-text" placeholder="اكتب رسالتك..." maxlength="150" />
+      <button id="chat-send">➤</button>
+    </div>
+  </div>
+
+  <!-- زر التحكم -->
+  <div id="admin-trigger" title="لوحة التحكم">⚙️</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
